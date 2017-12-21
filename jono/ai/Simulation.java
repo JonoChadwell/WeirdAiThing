@@ -6,7 +6,7 @@ public class Simulation {
 
     public Simulation() {
         world = new World();
-        world.addOrganism(0);
+        world.addOrganism(3);
     }
 
     public void tick() {

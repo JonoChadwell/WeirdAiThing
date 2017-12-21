@@ -59,6 +59,10 @@ public class Organism {
     }
 
     public void update() {
+        location.setSensor(currentLocation.getId());
+        food.setSensor(currentLocation.getFood());
+        water.setSensor(currentLocation.getWater());
+
         for (Connection c : connections) {
             c.update();
         }
@@ -76,5 +80,6 @@ public class Organism {
             System.out.println("Moving to the " + facing);
             currentLocation = currentLocation.locationToThe(facing);
         }
+        System.out.println("Currently at location " + currentLocation.getId());
     }
 }
